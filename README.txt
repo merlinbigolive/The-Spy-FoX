@@ -1,7 +1,21 @@
-THESPYFOX LIGHT THEME — SELF-CONTAINED PAGES
+THESPYFOX — PROFESSIONAL WEBSITE PACKAGE
 
-All HTML pages are in the ZIP root. Each page contains its own CSS, JavaScript and embedded logo, so no external stylesheet/script/image files are needed for the design to load. Upload all HTML files directly to the GitHub repository root.
+All files are in the ZIP root; no nested folders.
 
-Pages: index.html, request-investigation.html, join-investigator.html, client-signup.html, client-login.html, detective-signup.html, detective-login.html.
+Pages:
+- index.html
+- request-investigation.html
+- join-investigator.html
+- client-signup.html
+- client-login.html
+- detective-signup.html
+- detective-login.html
 
-IMPORTANT: This remains a static prototype. Sign-up/login are not real authentication and forms do not transmit/store data. Agreement PDFs are print-to-PDF drafts, not digitally signed contracts. Add secure backend and legal review before production.
+Design updates:
+- Replaced phone screenshot logo with a custom inline fox mark.
+- Removed the large circular hero image.
+- Removed the planned-markets country chips section.
+- Added a designed case-intake panel and consistent responsive navy, ivory, slate and gold theme.
+- Each HTML page contains its own CSS and visual assets.
+
+Important: This is a static front-end. Real account authentication, secure data storage, email verification and legally reviewed/signed agreements require a backend and professional legal review.
