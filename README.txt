@@ -1,16 +1,11 @@
 THESPYFOX WEBSITE PROTOTYPE
-===========================
 
-Open index.html in a modern browser. The logo image is stored in assets/thespyfox-fox-logo.jpg.
+Files:
+- index.html: homepage
+- request-investigation.html: separate client request form and client service agreement PDF generator
+- join-investigator.html: separate investigator registration form and investigator contract PDF generator
+- assets/thespyfox-fox-logo.jpg: logo asset
 
-Included:
-- Responsive dark navy and gold landing page
-- User-provided fox-face logo
-- Separate client and investigator registration UI
-- Country selector for planned launch markets
-- Demo login and sample dashboards
-- Illustrative client / investigator agreement previews
-- Print / Save as PDF support
+Open index.html or deploy the folder to a static host such as GitHub Pages. Keep the three HTML files and assets folder together.
 
-IMPORTANT LIMITATIONS
-This is a static frontend prototype only. Forms do not send or save data. It does not include real authentication, OTP, government ID verification, backend/database, payments, live case management, production electronic signatures, or legal approval. Do not use it to collect sensitive information. Before launch, implement security/privacy controls and have local counsel review licensing and legal requirements in each jurisdiction.
+Forms operate locally in the browser only; no data is sent or saved. The PDF is a proposed template, not legal advice, proof of identity, a verified appointment, payment receipt, or digitally signed contract. Before real use, add a secure backend, privacy/security controls, and jurisdiction-specific legal review.
