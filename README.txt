@@ -1,17 +1,7 @@
-THESPYFOX WEBSITE PROTOTYPE
-==========================
-Pages:
-- index.html                  Homepage
-- request-investigation.html Client case request + client service agreement
-- join-investigator.html     Investigator application + investigator agreement
-- client-signup.html         Separate client registration page
-- client-login.html          Separate client login page
-- detective-signup.html      Separate investigator registration page
-- detective-login.html       Separate investigator login page
+THESPYFOX LIGHT THEME — SELF-CONTAINED PAGES
 
-HOW TO USE
-Open index.html in a browser. The two homepage calls-to-action navigate to different pages.
-Submitting a case/application opens a print-ready agreement in a new tab. Choose “Save as PDF” in the browser print dialog.
+All HTML pages are in the ZIP root. Each page contains its own CSS, JavaScript and embedded logo, so no external stylesheet/script/image files are needed for the design to load. Upload all HTML files directly to the GitHub repository root.
 
-IMPORTANT LIMITATIONS
-This is a static front-end prototype. Sign-up/login do not create accounts or authenticate users; forms do not send/store data; no identity checks, payment processing, case assignment or real e-signature are connected. The draft agreements are not legal advice or a guarantee of enforceability. Before production launch, add a secure backend, authentication, authorization, privacy/security controls, verified onboarding and jurisdiction-specific legal review. Do not collect sensitive personal data through this prototype.
+Pages: index.html, request-investigation.html, join-investigator.html, client-signup.html, client-login.html, detective-signup.html, detective-login.html.
+
+IMPORTANT: This remains a static prototype. Sign-up/login are not real authentication and forms do not transmit/store data. Agreement PDFs are print-to-PDF drafts, not digitally signed contracts. Add secure backend and legal review before production.
