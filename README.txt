@@ -1,21 +1,15 @@
-THESPYFOX — PROFESSIONAL WEBSITE PACKAGE
+THESPYFOX CINEMATIC WEBSITE
 
-All files are in the ZIP root; no nested folders.
+All files are placed directly in the ZIP root — no folders.
 
-Pages:
-- index.html
-- request-investigation.html
-- join-investigator.html
-- client-signup.html
-- client-login.html
-- detective-signup.html
-- detective-login.html
+Landing page:
+- Uses the user-provided detective image as the full hero background.
+- Immediately below the hero copy are only two portal buttons: Client Login and Spy Login.
+- Client Login opens client-login.html.
+- Spy Login opens detective-login.html.
+- No signup or login forms are embedded on the landing page.
+- The previous circular hero graphic and country/market chips are not present.
 
-Design updates:
-- Replaced phone screenshot logo with a custom inline fox mark.
-- Removed the large circular hero image.
-- Removed the planned-markets country chips section.
-- Added a designed case-intake panel and consistent responsive navy, ivory, slate and gold theme.
-- Each HTML page contains its own CSS and visual assets.
+Separate pages are included for client/investigator login, signup, case request and investigator onboarding.
 
-Important: This is a static front-end. Real account authentication, secure data storage, email verification and legally reviewed/signed agreements require a backend and professional legal review.
+Important: Front-end forms are prototypes and do not securely create/authenticate accounts or store submissions. Connect a secure backend, configure access controls, and obtain legal review before production use.
