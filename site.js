@@ -1,0 +1,24 @@
+
+function demoAuth(e,role,mode){e.preventDefault();const t=document.getElementById('authToast');t.textContent=(mode==='signup'?'Demo registration checked.':'Demo sign-in checked.')+' No account was created or authenticated because this website has no secure backend yet.';t.classList.add('show');}
+function prepareAgreement(e,role){e.preventDefault();const form=e.currentTarget;const isClient=role==='client';const name=form.querySelector('[name="Full name"]').value.trim();const title=isClient?'TheSpyFox Client Service Agreement':'TheSpyFox Investigator Agreement';const entries=[...form.querySelectorAll('input[name],select[name],textarea[name]')].filter(el=>el.value.trim()).map(el=>[el.name,el.value.trim()]);const agreement=isClient?[
+'1. SCOPE: No work begins until the lawful scope, deliverables, timeline and fees are separately confirmed in writing.',
+'2. LAWFUL PURPOSE: The client confirms the request has a lawful purpose and will not involve stalking, harassment, unauthorized access or unlawful surveillance.',
+'3. FEES AND CANCELLATION: Price, expenses, payment schedule, cancellation and refund terms must be disclosed and agreed before work begins.',
+'4. CONFIDENTIALITY: Personal information must be handled only as permitted by applicable law and the final privacy notice.',
+'5. LIMITS AND DISPUTES: Results are not guaranteed. A final agreement must specify complaint handling, governing law and dispute resolution.',
+'6. DRAFT STATUS: This is a prototype template, not legal advice, proof of acceptance by a service provider, or a digitally signed contract.'
+]:[
+'1. PROFESSIONAL STATUS: The final agreement must state the relationship and scope of the engagement.',
+'2. QUALIFICATIONS: The investigator must maintain any licence or permission required by local law; live service should verify credentials before assignments.',
+'3. LAWFUL METHODS: No unlawful surveillance, trespass, unauthorized account/device access, harassment, coercion or privacy violations.',
+'4. CONFIDENTIALITY: Case information must be protected and used only for authorized work under applicable law.',
+'5. FEES AND DELIVERABLES: Scope, deadline, compensation, expenses, acceptance criteria and payment timing must be agreed in writing before each case.',
+'6. TERMINATION AND DISPUTES: The final agreement must define cancellation, complaints, liability, governing law and dispute resolution.',
+'7. DRAFT STATUS: This is not legal advice, a job offer, or a digitally signed contract. Local legal review is required.'
+];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const rows=entries.map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v).replace(/\n/g,'<br>')}</td></tr>`).join('');
+const printWin=window.open('','_blank');if(!printWin){alert('Please allow pop-ups to prepare your PDF.');return;}
+printWin.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${esc(title)}</title><style>body{font:14px/1.55 Arial,sans-serif;color:#111;margin:35px}h1{font-size:24px}h2{font-size:17px;margin-top:25px}.meta{color:#555;font-size:12px}table{border-collapse:collapse;width:100%;margin:20px 0}th,td{border:1px solid #bbb;padding:9px;text-align:left;vertical-align:top}th{width:32%;background:#f2f2f2}.terms li{margin:9px 0}.sign{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-top:55px}.line{border-top:1px solid #555;padding-top:7px;font-size:12px}.warning{border:1px solid #999;padding:12px;margin-top:22px;font-size:12px}@media print{button{display:none}}</style></head><body><h1>THESPYFOX</h1><div class="meta">GLOBAL PRIVATE INVESTIGATION NETWORK · DRAFT DOCUMENT</div><h2>${esc(title)}</h2><p class="meta">Prepared on ${new Date().toLocaleDateString()} · Applicant / client: ${esc(name)}</p><h2>Submitted details</h2><table>${rows}</table><h2>Agreement terms</h2><ol class="terms">${agreement.map(x=>`<li>${esc(x)}</li>`).join('')}</ol><p><b>Acknowledgement:</b> The person completing this form confirms they have reviewed the displayed draft. This document does not establish that another party accepted the agreement.</p><div class="sign"><div class="line">Client / Investigator signature (if separately executed)</div><div class="line">Date</div></div><div class="warning"><b>Important:</b> This is a website prototype document, not legal advice and not a verified electronic signature. The final agreement should be reviewed for the applicable jurisdiction and signed by all required parties.</div><p class="meta">TheSpyFox · Prototype generated locally in your browser. No form data was sent to a server.</p><script>window.onload=()=>setTimeout(()=>window.print(),350)<\/script></body></html>`);
+printWin.document.close();const toast=document.getElementById(isClient?'clientToast':'investToast');toast.textContent='Agreement prepared in a new tab. In the print dialog, select “Save as PDF”.';toast.classList.add('show');
+}
